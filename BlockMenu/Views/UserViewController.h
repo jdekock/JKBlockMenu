@@ -1,5 +1,5 @@
 //
-//  DashboardViewController.h
+//  UserViewController.h
 //  BlockMenu
 //
 //  Created by Jordi de Kock on 12-10-15.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JKBlockMenuViewController.h"
 
-@interface DashboardViewController : UIViewController
+@interface UserViewController : UIViewController
 
 @end

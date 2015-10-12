@@ -14,11 +14,16 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    _blockMenu = [[JKBlockMenuViewController alloc] init];
+    DashboardViewController *dashboardView = [[DashboardViewController alloc] init];
+    FavoritesViewController *favoritesView = [[FavoritesViewController alloc] init];
+    NotificationsViewController *notificationsView = [[NotificationsViewController alloc] init];
+    UserViewController *userView = [[UserViewController alloc] init];
+    SettingsViewController *settingsView = [[SettingsViewController alloc] init];
+    
+    _blockMenu = [[JKBlockMenuViewController alloc] initWithViewControllers:[NSArray arrayWithObjects:dashboardView, favoritesView, notificationsView, userView, settingsView, nil]];
     
     [self.window setRootViewController:_blockMenu];
     [self.window makeKeyAndVisible];

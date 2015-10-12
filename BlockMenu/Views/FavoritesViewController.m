@@ -1,31 +1,24 @@
 //
-//  DashboardViewController.m
+//  FavoritesViewController.m
 //  BlockMenu
 //
 //  Created by Jordi de Kock on 12-10-15.
 //  Copyright © 2015 jdekock. All rights reserved.
 //
 
-#import "DashboardViewController.h"
+#import "FavoritesViewController.h"
 
-@interface DashboardViewController ()
+@interface FavoritesViewController ()
 
 @end
 
-@implementation DashboardViewController
+@implementation FavoritesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.view setBackgroundColor:[UIColor redColor]];
-    
-    UIButton *openMenu = [UIButton buttonWithType:UIButtonTypeCustom];
-    [openMenu setFrame:CGRectMake((self.view.bounds.size.width - 200) / 2, 100, 200, 50)];
-    [openMenu setBackgroundColor:[UIColor lightGrayColor]];
-    [openMenu setTitle:@"Open menu" forState:UIControlStateNormal];
-    [openMenu addTarget:[JKBlockMenuViewController sharedInstance] action:@selector(openMenu) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:openMenu];
+    [self.view setBackgroundColor:[UIColor greenColor]];
 }
 
 - (void)didReceiveMemoryWarning {
