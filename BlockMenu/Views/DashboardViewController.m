@@ -24,8 +24,12 @@
     [openMenu setFrame:CGRectMake((self.view.bounds.size.width - 200) / 2, 100, 200, 50)];
     [openMenu setBackgroundColor:[UIColor lightGrayColor]];
     [openMenu setTitle:@"Open menu" forState:UIControlStateNormal];
-    [openMenu addTarget:[JKBlockMenuViewController sharedInstance] action:@selector(openMenu) forControlEvents:UIControlEventTouchUpInside];
+    [openMenu addTarget:self action:@selector(openMenu) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:openMenu];
+}
+
+- (void)openMenu {
+    [[JKBlockMenuViewController sharedInstance] switchMenu];
 }
 
 - (void)didReceiveMemoryWarning {

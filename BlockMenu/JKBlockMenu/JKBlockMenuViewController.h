@@ -9,15 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "JKBlockMenuItem.h"
 
-@interface JKBlockMenuViewController : UIViewController
+@interface JKBlockMenuViewController : UIViewController <JKBlockMenuItemDelegate>
 
 @property (nonatomic, strong) NSArray *viewControllers;
 @property (nonatomic, strong) UIViewController *centerViewController;
-@property (nonatomic, assign) int blockWidth;
+@property (nonatomic, assign) float blockWidth;
 
 - (id)initWithViewControllers:(NSArray *)viewControllers;
 
 + (JKBlockMenuViewController *)sharedInstance;
-+ (void)openMenu;
+- (void)openMenu;
+- (void)closeMenu;
+- (void)switchMenu;
 
 @end

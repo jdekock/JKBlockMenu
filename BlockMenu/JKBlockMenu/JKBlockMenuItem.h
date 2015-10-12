@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JKBlockMenuItem : UIView
+@protocol JKBlockMenuItemDelegate <NSObject>
+
+- (void)selectedMenuItem:(NSNumber *)index;
 
 @end
+
+@interface JKBlockMenuItem : UIView
+
+@property (nonatomic, strong) NSNumber *index;
+@property (nonatomic, assign) id <JKBlockMenuItemDelegate> delegate;
+
+@end
+
